@@ -106,10 +106,10 @@ if sCommand == "put" then
     write("Connecting to devbin.dev... ")
     local response, err =
         http.post(
-        "https://devbin.dev/api/v2/paste",
+        "https://devbin.dev/api/v3/paste",
         textutils.serialiseJSON({
             title = sName,
-            syntax = "lua",
+            syntaxName = "lua",
             content = sText,
             asGuest = uploadAsGuest,
         }),
